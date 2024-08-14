@@ -1,6 +1,7 @@
 [System.Serializable]
-public enum ETypeStick
+public enum EStickType
 {
+    None,
     Horizontal,
     Vertical
 }

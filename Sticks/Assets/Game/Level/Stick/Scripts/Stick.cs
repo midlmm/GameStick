@@ -6,7 +6,7 @@ public class Stick : MonoBehaviour
 {
     [SerializeField] private float _spacing;
     [SerializeField] private float _speed;
-    [SerializeField] private ETypeStick _typeStick;
+    [SerializeField] private EStickType _typeStick;
 
     private float _currentSpeed;
 
@@ -17,14 +17,14 @@ public class Stick : MonoBehaviour
         RaycastHit2D hitUp = Physics2D.Raycast(transform.position, Vector2.up);
         RaycastHit2D hitDown = Physics2D.Raycast(transform.position, Vector2.down);
 
-        if(_typeStick == ETypeStick.Horizontal)
+        if(_typeStick == EStickType.Horizontal)
         {
             if (hitRight && hitRight.transform.TryGetComponent<Barriers>(out var barriers1)) _currentSpeed = _speed; 
             else if (hitLeft && hitLeft.transform.TryGetComponent<Barriers>(out var barriers2)) _currentSpeed = -_speed;
             else if (hitRight) _currentSpeed = _speed;
             else if (hitLeft) _currentSpeed = -_speed;
         }
-        else if(_typeStick == ETypeStick.Vertical)
+        else if(_typeStick == EStickType.Vertical)
         {
             if (hitUp && hitUp.transform.TryGetComponent<Barriers>(out var barriers1)) _currentSpeed = _speed;
             else if (hitDown && hitDown.transform.TryGetComponent<Barriers>(out var barriers2)) _currentSpeed = -_speed;
@@ -35,11 +35,11 @@ public class Stick : MonoBehaviour
 
     private void Update()
     {
-        if (_typeStick == ETypeStick.Horizontal)
+        if (_typeStick == EStickType.Horizontal)
         {
             transform.position = new Vector2(transform.position.x + _currentSpeed * Time.deltaTime, transform.position.y);
         }
-        else if (_typeStick == ETypeStick.Vertical)
+        else if (_typeStick == EStickType.Vertical)
         {
             transform.position = new Vector2(transform.position.x, transform.position.y + _currentSpeed * Time.deltaTime);
         }

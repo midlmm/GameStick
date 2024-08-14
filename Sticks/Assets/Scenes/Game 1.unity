@@ -216,7 +216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 318829006}
-  - component: {fileID: 318829005}
+  - component: {fileID: 318829007}
   - component: {fileID: 318829004}
   - component: {fileID: 318829003}
   m_Layer: 0
@@ -273,21 +273,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &318829005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318829002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: affa80978c9047845bb4e71bcd3603dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spacing: 0.1
-  _speed: 5
-  _typeStick: 1
 --- !u!4 &318829006
 Transform:
   m_ObjectHideFlags: 0
@@ -304,6 +289,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &318829007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318829002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255cb12477c547445b66617ea4c85ddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 2
+  _movementDirection: 1
+  _movementSpeed: 20
+  _otherSticksCheckDistance: 1
 --- !u!1 &393695999
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,7 +1000,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1233692559}
-  - component: {fileID: 1233692558}
+  - component: {fileID: 1233692560}
   - component: {fileID: 1233692557}
   - component: {fileID: 1233692556}
   m_Layer: 0
@@ -1056,21 +1057,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1233692558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233692555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: affa80978c9047845bb4e71bcd3603dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spacing: 0.1
-  _speed: 5
-  _typeStick: 0
 --- !u!4 &1233692559
 Transform:
   m_ObjectHideFlags: 0
@@ -1087,6 +1073,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1233692560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233692555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255cb12477c547445b66617ea4c85ddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 1
+  _movementDirection: -1
+  _movementSpeed: 20
+  _otherSticksCheckDistance: 1
 --- !u!1 &1356297334
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,7 +1098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1356297336}
-  - component: {fileID: 1356297338}
+  - component: {fileID: 1356297340}
   - component: {fileID: 1356297337}
   - component: {fileID: 1356297339}
   m_Layer: 0
@@ -1143,21 +1145,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1356297338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356297334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: affa80978c9047845bb4e71bcd3603dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spacing: 0.1
-  _speed: 5
-  _typeStick: 0
 --- !u!61 &1356297339
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1184,6 +1171,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.15, y: 0.6}
   m_EdgeRadius: 0
+--- !u!114 &1356297340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356297334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255cb12477c547445b66617ea4c85ddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 1
+  _movementDirection: 1
+  _movementSpeed: 20
+  _otherSticksCheckDistance: 1
 --- !u!1 &1592159381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,7 +1381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1729703643}
-  - component: {fileID: 1729703642}
+  - component: {fileID: 1729703644}
   - component: {fileID: 1729703641}
   - component: {fileID: 1729703640}
   m_Layer: 0
@@ -1435,21 +1438,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1729703642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1729703639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: affa80978c9047845bb4e71bcd3603dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spacing: 0.1
-  _speed: 5
-  _typeStick: 1
 --- !u!4 &1729703643
 Transform:
   m_ObjectHideFlags: 0
@@ -1466,6 +1454,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1729703644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729703639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255cb12477c547445b66617ea4c85ddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 2
+  _movementDirection: 1
+  _movementSpeed: 20
+  _otherSticksCheckDistance: 1
 --- !u!1 &1769436432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,7 +1663,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1933049921}
-  - component: {fileID: 1933049920}
+  - component: {fileID: 1933049922}
   - component: {fileID: 1933049919}
   - component: {fileID: 1933049918}
   m_Layer: 0
@@ -1716,21 +1720,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1933049920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933049917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: affa80978c9047845bb4e71bcd3603dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spacing: 0.1
-  _speed: 5
-  _typeStick: 0
 --- !u!4 &1933049921
 Transform:
   m_ObjectHideFlags: 0
@@ -1747,3 +1736,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1933049922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933049917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255cb12477c547445b66617ea4c85ddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 1
+  _movementDirection: -1
+  _movementSpeed: 20
+  _otherSticksCheckDistance: 1
